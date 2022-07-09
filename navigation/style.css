@@ -1,3 +1,90 @@
 body {
   margin: 0;
 }
+
+header {
+  background-color: #000;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  /* sets text to color white*/
+  color: #fff;
+  /*centers the text*/
+  text-align: center;
+  /*removes default margins around the h1 element*/
+  margin: 0;
+  /*moves text down 20px from top*/
+  padding-top: 20px;
+}
+
+header nav {
+  /*changes display from default to flex*/
+  display: flex;
+  /* centers and element defined as display flex */
+  justify-content: center;
+}
+
+header nav ul {
+  /* changes the display from its default to flex*/
+  display: flex;
+  /* removes the default padding to the left of the unordered list*/
+  padding-left: 0;
+  /* removes the bullet points from the list item's within the unordered list.*/
+  list-style: none;
+}
+
+header nav ul li a {
+  /* the link color is white.*/
+  color: #fff;
+  /* removes the underline from the links.*/
+  text-decoration: none;
+  /*Applies 20 pixels of margin to the right of each link 
+     creating a visual gap between the navigation links.*/
+     margin: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  /* move margin to the right so that the nav appears centered.*/
+  margin-right: 0;
+}
+
+/* When a web browser is larger than 600 pixels,
+   apply these rules. */
+   @media all and (min-width: 600px) {
+    header {
+      /* Changes the default setting from `block` to `flex`. */
+      display: flex;
+      /* Pushes the items (the title and nav) to the far sides of the 
+         browser with space between them. */
+      justify-content: space-between;
+      /* Adds 0 pixels padding top and bottom, and 30 pixels padding 
+         left and right. */
+      padding: 0 30px;
+    }
+  
+    header h1 {
+      /* Sets 14 pixels of margin above and below the `h1` and sets 
+          0 pixels of margin to the left and right. */
+      margin: 14px 0;
+      /* Removes or sets 0 pixels of padding above the `h1`. */
+      padding-top: 0;
+    }
+  
+    header nav {
+      /*
+        Pushes the navigation container down by 8 pixels to make it
+        present a little better visually within the space.
+      */
+      margin-top: 8px;
+    }
+    /* Users cannot hover on mobile devices, so that is why you
+       implement this behavior only for larger screens. */
+    header nav ul li a:hover {
+      /* Targets the change when a user holds the pointer over the anchor tag 
+         (link) within the list items within the unordered list that 
+         is within the navigation that is within the header. */
+      color: #bdbdbd;
+    }
+  }
+
